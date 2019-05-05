@@ -3,9 +3,10 @@
     <h1>Blog home!</h1>
     {% for post in posts %}
         <article class="media content-section">
+        <img src='media/{{ post.author.profile.image }}' class="rounded-circle article-img"/>
         <div class="media-body">
             <div class="article-metadata">
-            <img src='media/{{ post.author.profile.image }}' width="100"/>
+            
             <a class="mr-2" href="#">{{ post.author }}</a>
             <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
